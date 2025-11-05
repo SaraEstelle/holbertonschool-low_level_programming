@@ -3,8 +3,7 @@
 
 /**
  * main - program that prints its name
- * @argc: number of arguments
- * @argv: arrays content the past arguments
+ *
  *
  * Return: 0 (success)
  */
