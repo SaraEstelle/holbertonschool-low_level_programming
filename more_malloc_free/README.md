@@ -1,5 +1,4 @@
 🧠 C - More malloc, free
-
 🗂️ Table of Contents
 Project Description
 
@@ -29,27 +28,23 @@ Author
 
 License & Acknowledgments
 
----
-
 🌟 Introduction
-La gestion dynamique de la mémoire est une compétence essentielle en C. Contrairement aux langages de haut niveau, C te donne un contrôle total sur l’allocation et la libération de mémoire. Cela implique aussi une grande responsabilité : éviter les fuites mémoire et les erreurs de segmentation.
+Dynamic memory management is an essential skill in C. Unlike higher-level languages, C gives you full control over memory allocation and deallocation. This also comes with great responsibility: avoiding memory leaks and segmentation faults.
 
-Ce projet, C - More malloc, free, approfondit l’utilisation de malloc, free, ainsi que les fonctions associées comme calloc et realloc. Tu apprendras à manipuler la mémoire de manière sûre et efficace, et à construire des programmes robustes.
+This project, C - More malloc, free, deepens the use of malloc, free, and associated functions such as calloc and realloc. You will learn how to handle memory safely and efficiently, and how to build robust programs.
 
-Tu vas apprendre à :
+You will learn to:
 
-Allouer et libérer de la mémoire dynamiquement.
+Allocate and free memory dynamically.
 
-Utiliser calloc et realloc pour gérer des blocs mémoire.
+Use calloc and realloc to manage memory blocks.
 
-Créer des tableaux dynamiques d’entiers.
+Create dynamic arrays of integers.
 
-Écrire un programme de multiplication de grands nombres en base 10.
+Write a program to multiply large numbers in base 10.
 
 🧾 Project Description
-Ce projet introduit des fonctions avancées de gestion mémoire en C. Tu implémenteras tes propres versions de calloc, realloc, ainsi que des fonctions utilitaires pour manipuler des chaînes et des tableaux.
-
----
+This project introduces advanced memory management functions in C. You will implement your own versions of calloc, realloc, as well as utility functions to manipulate strings and arrays.
 
 📚 Resources
 Read or watch:
@@ -62,138 +57,123 @@ man calloc
 
 man realloc
 
----
-
 🎯 Learning Objectives
-À la fin de ce projet, tu devras être capable d’expliquer :
+By the end of this project, you should be able to explain:
 
-Comment utiliser la fonction exit.
+How to use the exit function.
 
-Le rôle et l’utilisation de calloc et realloc.
+The role and usage of calloc and realloc.
 
-Comment créer et gérer des tableaux dynamiques.
+How to create and manage dynamic arrays.
 
-Comment manipuler la mémoire pour des opérations complexes comme la multiplication de grands nombres.
-
----
+How to manipulate memory for complex operations such as multiplying large numbers.
 
 ⚙️ Requirements
-Compilation: Ubuntu 20.04 LTS avec gcc -Wall -Werror -Wextra -pedantic -std=gnu89
+Compilation: Ubuntu 20.04 LTS with gcc -Wall -Werror -Wextra -pedantic -std=gnu89
 
-Style: Betty (betty-style.pl et betty-doc.pl)
+Style: Betty (betty-style.pl and betty-doc.pl)
 
-Pas de variables globales
+No global variables
 
-Maximum 5 fonctions par fichier (sauf indication contraire)
+Maximum of 5 functions per file (unless otherwise specified)
 
-Fonctions autorisées: malloc, free, exit
+Allowed functions: malloc, free, exit
 
-Tous les prototypes doivent être inclus dans main.h
-
----
+All prototypes must be included in main.h
 
 🧩 Tasks & Learnings
-
 🥇 0. Trust no one
 File: 0-malloc_checked.c Prototype: void *malloc_checked(unsigned int b);
 
-💡 Description Alloue de la mémoire avec malloc. Termine le programme avec le code de sortie 98 si l’allocation échoue.
+💡 Description Allocates memory using malloc. Terminates the program with exit code 98 if allocation fails.
 
-🧠 Ce que j’ai appris
+🧠 What I learned
 
-Vérifier les erreurs d’allocation.
+How to check for allocation errors.
 
-Utiliser exit pour gérer les échecs.
+How to use exit to handle failures.
 
 🥈 1. string_nconcat
-
 File: 1-string_nconcat.c Prototype: char *string_nconcat(char *s1, char *s2, unsigned int n);
 
-💡 Description Concatène deux chaînes en allouant un nouvel espace mémoire.
+💡 Description Concatenates two strings by allocating new memory space.
 
-🧠 Ce que j’ai appris
+🧠 What I learned
 
-Gérer les chaînes NULL comme vides.
+Treating NULL strings as empty.
 
-Combiner deux chaînes en mémoire dynamique.
+Combining two strings in dynamic memory.
 
 🥉 2. _calloc
-
 File: 2-calloc.c Prototype: void *_calloc(unsigned int nmemb, unsigned int size);
 
-💡 Description Alloue un tableau de nmemb éléments de size octets chacun, initialisés à zéro.
+💡 Description Allocates an array of nmemb elements of size bytes each, initialized to zero.
 
-🧠 Ce que j’ai appris
+🧠 What I learned
 
-Initialiser la mémoire à zéro.
+Initializing memory to zero.
 
-Reproduire le comportement de calloc.
+Reproducing the behavior of calloc.
 
 🏅 3. array_range
-
 File: 3-array_range.c Prototype: int *array_range(int min, int max);
 
-💡 Description Crée un tableau d’entiers allant de min à max.
+💡 Description Creates an array of integers from min to max.
 
-🧠 Ce que j’ai appris
+🧠 What I learned
 
-Générer des séquences numériques dynamiques.
+Generating dynamic numeric sequences.
 
-Vérifier les bornes et gérer les erreurs.
+Checking bounds and handling errors.
 
 🏆 4. _realloc
-
 File: 100-realloc.c Prototype: void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
-💡 Description Réalloue un bloc mémoire en copiant les données existantes.
+💡 Description Reallocates a memory block by copying existing data.
 
-🧠 Ce que j’ai appris
+🧠 What I learned
 
-Adapter la taille d’un bloc mémoire.
+Adjusting the size of a memory block.
 
-Gérer les cas particuliers (ptr == NULL, new_size == 0).
+Handling special cases (ptr == NULL, new_size == 0).
 
 🧱 5. We must accept finite disappointment, but never lose infinite hope
-
 File: 101-mul.c
 
-💡 Description Programme qui multiplie deux grands nombres positifs passés en base 10.
+💡 Description Program that multiplies two large positive numbers passed in base 10.
 
-🧠 Ce que j’ai appris
+🧠 What I learned
 
-Manipuler des chaînes représentant des nombres.
+Handling strings representing numbers.
 
-Implémenter une multiplication manuelle en C.
+Implementing manual multiplication in C.
 
-Gérer les erreurs d’arguments et de format.
+Managing argument and format errors.
 
 🧰 Compilation & Execution
 bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 main.c <file>.c -o <executable>
 ./<executable>
-Exemple :
+Example:
 
 bash
 gcc 1-main.c 1-string_nconcat.c -o string_nconcat
 ./string_nconcat
-
----
 🏁 Conclusion
+This project strengthened my understanding of memory management in C. I learned to:
 
-Ce projet m’a permis de renforcer ma compréhension de la gestion mémoire en C. J’ai appris à :
+Properly allocate and free memory.
 
-Allouer et libérer correctement la mémoire.
+Write my own versions of standard functions (calloc, realloc).
 
-Écrire mes propres versions de fonctions standards (calloc, realloc).
+Manipulate dynamic structures such as arrays and strings.
 
-Manipuler des structures dynamiques comme des tableaux et des chaînes.
+Implement complex algorithms (large number multiplication) using only dynamic memory.
 
-Implémenter des algorithmes complexes (multiplication de grands nombres) en utilisant uniquement la mémoire dynamique.
-
-“La mémoire est une arme puissante : bien utilisée, elle construit ; mal utilisée, elle détruit.”
+“Memory is a powerful weapon: used well, it builds; used poorly, it destroys.”
 
 👤 Author
 SARA REBATI [https://github.com/SaraEstelle]
 
 📜 License & Acknowledgments
-Ce projet est sous licence MIT. Merci à Holberton School Thonon-les-Bains pour ces projets exigeants et formateurs en programmation C.
+This project is licensed under the MIT License. Special thanks to Holberton School Thonon-les-Bains for designing challenging and instructive C programming projects.
