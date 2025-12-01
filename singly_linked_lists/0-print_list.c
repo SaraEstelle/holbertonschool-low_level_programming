@@ -3,7 +3,7 @@
  * print_list -  prints all the elements of a list_t list
  * @h: Pointer to the list_t list to print
  *
- * Retrun: The number of the nodes or nil if str is NULL
+ * Return: The number of the nodes or nil if str is NULL
  */
 size_t print_list(const list_t *h)
 {
