@@ -1,8 +1,10 @@
-#ifndef LISTS.H
-#define LISTS .H
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stddef.h> /* for size_t  */
 #include <stdlib.h> /* for malloc, fre, exit */
+#include <stdio.h>
+#include <string.h>
 
 /**
  * struct list_s - singly linked list
@@ -27,4 +29,4 @@ list_t *add_node(list_t **head, const char *str);
 list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
-#endif /* LISTS.H */
+#endif /* LISTS_H */
